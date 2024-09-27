@@ -2,7 +2,7 @@
   "name": "generative-art-explorer_canvas-context",
   "version": "0.0.1",
   "description": "An exploration and testing project for the canvas context of the @batpb/genart library",
-  "main": "",
+  "main": "./out/dist/src/sketch.js",
   "scripts": {
     "lint": "eslint ./src",
     "build": "rm -r ./out; rollup --config",
