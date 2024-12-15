@@ -1,24 +1,36 @@
 {
-  "name": "generative-art-explorer_canvas-context",
+  "name": "sketch-context-explorer",
   "version": "0.0.1",
-  "description": "An exploration and testing project for the canvas context of the @batpb/genart library",
-  "main": "./out/dist/src/sketch.js",
+  "description": "An exploration and testing project for the sketch context of the @batpb/genart library",
+  "private": true,
   "scripts": {
-    "lint": "eslint ./src",
-    "build": "rm -r ./out; rollup --config",
-    "start": "rm -r ./out; rollup --config --watch"
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development",
+    "lint:js": "eslint -c eslint.config.js.mjs eslint.config.ts.mjs eslint.config.js.mjs webpack.config.js",
+    "lint:ts": "eslint -c eslint.config.ts.mjs ./src",
+    "stats": "webpack --mode development --profile --json > ./out/stats.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-explorer_canvas-context.git"
+    "url": "git+https://github.com/brittni-and-the-polar-bear/sketch-context-explorer.git"
   },
   "keywords": [
+    "algorithmic art",
     "code art",
     "generative art",
     "p5",
     "p5.js",
     "p5js",
-    "typescript"
+    "p5-js",
+    "typescript",
+    "testing",
+    "canvas",
+    "sketch",
+    "graphics",
+    "mouse",
+    "keyboard"
   ],
   "author": {
     "name": "brittni and the polar bear",
@@ -36,38 +48,30 @@
   ],
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/brittni-and-the-polar-bear/generative-art-explorer_canvas-context/issues"
+    "url": "https://github.com/brittni-and-the-polar-bear/sketch-context-explorer/issues"
   },
-  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-explorer_canvas-context#readme",
+  "homepage": "https://github.com/brittni-and-the-polar-bear/sketch-context-explorer#readme",
   "dependencies": {
-    "@batpb/genart": "^1.1.0",
-    "@types/p5": "^1.7.6",
-    "p5": "^1.11.1"
+    "@batpb/genart": "^2.0.0-rc2",
+    "p5": "^1.11.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.15.0",
-    "@rollup/plugin-commonjs": "^28.0.1",
-    "@rollup/plugin-html": "^1.0.4",
-    "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.1.1",
-    "@stylistic/eslint-plugin": "^2.11.0",
+    "@eslint/js": "^9.17.0",
+    "@stylistic/eslint-plugin": "^2.12.1",
     "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "^8.16.0",
-    "@typescript-eslint/parser": "^8.16.0",
-    "eslint": "^9.15.0",
+    "@types/p5": "^1.7.6",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.17.0",
     "eslint-plugin-es-x": "^8.4.1",
-    "eslint-plugin-n": "^17.14.0",
+    "eslint-plugin-n": "^17.15.0",
     "eslint-plugin-security": "^3.0.1",
-    "rollup": "^4.27.4",
-    "rollup-plugin-analyzer": "^4.0.0",
-    "rollup-plugin-css-only": "^4.5.2",
-    "rollup-plugin-serve": "^1.1.1",
-    "size-limit": "^11.1.6",
-    "ts-node": "^10.9.2",
-    "tslib": "^2.8.1",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "ts-loader": "^9.5.1",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.16.0"
+    "typescript-eslint": "^8.18.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.0"
   }
 }
