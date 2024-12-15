@@ -3,10 +3,8 @@
 # node and npm
 node_modules/
 
-# generated files
+# bundling, testing, and coverage output
 out/
-dist/
-zip/
 
-# WebStorm
+# WebStorm and JetBrains IDEs
 .idea/
